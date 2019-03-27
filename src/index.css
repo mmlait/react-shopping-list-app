@@ -1,0 +1,15 @@
+html,
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+}
+
+body {
+  background-color: #EFDCEB;
+  font-family: "Segoe UI", Candara, "Trebuchet MS", serif;
+}
+
+#root {
+  height: 100vh;
+}
