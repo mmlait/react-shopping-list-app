@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
+import colors from '../colors';
 import Header from './Header';
 import AddItem from './AddItem';
 import Item from './Item';
 import Footer from './Footer'
 
 
+export const GlobalStyle = createGlobalStyle`
+  html, body, #root {
+     background-color: #EFDCEB;
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     font-family: "Segoe UI", Candara, "Trebuchet MS", serif;
+  }
+`
+
 const AppWrapper = styled.div`
   width: 50%;
+  max-width: 800px;
   margin: 0 auto;
   min-height: 100%;
   position: relative;
@@ -19,9 +31,10 @@ const AppWrapper = styled.div`
 `
 
 const ListWrapper = styled.div`
-  background-color: #A2A2A2;
+  background-color: ${colors.listBackground};
+  color: ${colors.textColor};
   padding: 10px;
-  border: 1px solid #420134;
+  border-radius: 10px;
 `
 
 class App extends Component {
@@ -58,6 +71,7 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
+      <GlobalStyle />
         <Header />
 
           <ListWrapper>

@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import colors from '../colors';
+
 
 const AddItemForm = styled.form`
   display: flex;
+  margin: 10px;
 `
 
 const AddItemInput = styled.input`
   flex-grow: 1;
-  padding: 10px;
   background-color: #FFFFFF;
-  border: none;
-  text-shadow: none;
-  font-size: 1rem;
+  padding: 10px;
   font-family: "Segoe UI", Candara, "Trebuchet MS", serif;
+  font-size: 1rem;
+  text-shadow: none;
+  border: none;
   &:focus {
     outline: none;
-    border: 1px solid #420134;
   }
 `
 
 const AddItemBtn = styled.button`
   display: block;
-  background-color: #420134;
-  color: white;
+  background-color: ${colors.button};
+  color: ${colors.textColor};
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -31,7 +33,7 @@ const AddItemBtn = styled.button`
     outline: none;
   }
   &:hover {
-    color: #FD41D4;
+    background-color: ${colors.buttonHoverBg};
   }
 `
 
@@ -41,7 +43,7 @@ class AddItem extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    // check that input value is not only space
+    // check that input value is not empty
     if (this.userInput.current.value.trim() !== "") {
         this.props.addItems(this.userInput.current.value);
     }
