@@ -1,7 +1,7 @@
 
-                                              Shopping List App
-                                        ____________________________
+                          Shopping List App
+                    ____________________________
 
 
 
-<img src="shoppingList-gif.gif" width="350"/>
+<img src="shoppingList-gif.gif" width="500"/>
